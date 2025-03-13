@@ -45,10 +45,12 @@ function copyPassword() {
     if (output.textContent) {     // Again Used textContent instead of innerText as it's slighlty faster
         navigator.clipboard.writeText(output.textContent);
         copyBtn.style.backgroundColor = "green";
+        output.style.backgroundColor = "#21de8e"
         
         setTimeout(()=> {
             copyBtn.style.backgroundColor = "black";
-        },1000)
+            output.style.backgroundColor = "white"
+        },300)
 
         console.log("Password Copied");
     } else {
